@@ -4,6 +4,15 @@ const tujuan = document.getElementById("list2");
 const button = document.getElementById("btn");
 const tes = document.getElementsByClassName("todo-app");
 
+inputBox.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    // Ambil nilai dari input
+    var inputValue = document.getElementById("input-box").value;
+    // Tampilkan nilai pada elemen dengan id "result"
+    addTask();
+  }
+});
+
 function addTask() {
   if (inputBox.value === "") {
     alert("Jangan Kosong");
